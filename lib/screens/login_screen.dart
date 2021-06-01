@@ -44,7 +44,6 @@ class _LoginScreenState extends State<LoginScreen> {
               keyboardType: TextInputType.emailAddress,
               onChanged: (value) {
                 email = value;
-                //Do something with the user input.
               },
               decoration:
                   kTextFieldDecoration.copyWith(hintText: 'Enter your email'),
@@ -54,10 +53,10 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextField(
               textAlign: TextAlign.center,
+              obscuringCharacter: '*', //changed obscure text to *
               obscureText: true,
               onChanged: (value) {
                 password = value;
-                //Do something with the user input.
               },
               decoration: kTextFieldDecoration.copyWith(
                   hintText: 'Enter your password'),
